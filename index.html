@@ -1,0 +1,17 @@
+{% extends 'base.html' %}{% block title %}AI Feedback Analyzer{% endblock %}
+{% block content %}
+<section class="hero">
+  <div class="hero-copy">
+    <span class="eyebrow">AI-POWERED FEEDBACK INTELLIGENCE</span>
+    <h1>Turn customer feedback into <span>clear insights.</span></h1>
+    <p>Analyze feedback automatically, understand sentiment, monitor trends, and export actionable data from one simple dashboard.</p>
+    <div class="hero-actions"><a class="button primary" href="{{ url_for('register') }}">Start Analyzing</a><a class="button secondary" href="{{ url_for('login') }}">Sign In</a></div>
+  </div>
+  <div class="hero-card"><div class="mini-top"><span>Live Analysis</span><span class="dot"></span></div><div class="score">82<span>/100</span></div><div class="score-label">Overall sentiment</div><div class="bar"><i></i></div><div class="mini-grid"><div><b>68%</b><small>Positive</small></div><div><b>21%</b><small>Neutral</small></div><div><b>11%</b><small>Negative</small></div></div></div>
+</section>
+<section class="feature-grid">
+  <article><div class="feature-icon">✦</div><h3>AI Sentiment Analysis</h3><p>Classify feedback as positive, neutral, or negative with polarity and subjectivity scores.</p></article>
+  <article><div class="feature-icon">◫</div><h3>Smart Dashboard</h3><p>Search, filter, sort, and visualize feedback with clear summary statistics and charts.</p></article>
+  <article><div class="feature-icon">⇩</div><h3>CSV Import & Export</h3><p>Analyze multiple feedback entries from CSV files and download your complete analysis.</p></article>
+</section>
+{% endblock %}

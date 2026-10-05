@@ -1,0 +1,2 @@
+const ctx=document.getElementById('sentimentChart');
+if(ctx&&window.sentimentData){new Chart(ctx,{type:'doughnut',data:{labels:['Positive','Neutral','Negative'],datasets:[{data:[window.sentimentData.positive,window.sentimentData.neutral,window.sentimentData.negative],backgroundColor:['#18875d','#d39a22','#c23b48'],borderWidth:0}]},options:{responsive:true,maintainAspectRatio:false,cutout:'68%',plugins:{legend:{position:'bottom',labels:{usePointStyle:true,padding:20}}}}});}

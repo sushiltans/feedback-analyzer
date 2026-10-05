@@ -1,0 +1,7 @@
+{% extends 'base.html' %}{% block title %}Analyze Feedback{% endblock %}
+{% block content %}<div class="page-head"><div><span class="eyebrow">FEEDBACK ANALYSIS</span><h1>Analyze feedback</h1><p class="muted">Enter a single comment or upload a CSV file containing feedback.</p></div><a class="button secondary" href="{{ url_for('dashboard') }}">View Dashboard</a></div>
+<div class="two-col"><section class="panel"><h2>Analyze one feedback</h2><form method="post"><label>Feedback text<textarea name="text" rows="9" maxlength="5000" placeholder="Example: The product is easy to use and the support team was very helpful..." required></textarea></label><div class="form-row"><span class="muted">Maximum 5,000 characters</span><button class="button primary">Analyze & Save</button></div></form></section>
+<section class="panel"><h2>Bulk CSV analysis</h2><p class="muted">Upload a CSV with a <b>feedback</b> or <b>text</b> column. If there is no header, the first column is used.</p><form class="upload-box" action="{{ url_for('upload_csv') }}" method="post" enctype="multipart/form-data"><input type="file" name="file" accept=".csv,text/csv" required><button class="button primary">Upload & Analyze</button></form><div class="tip"><b>Example CSV</b><pre>feedback
+"The service was excellent!"
+"The app is okay, but could be faster."
+"Very disappointing experience."</pre></div></section></div>{% endblock %}
